@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Second job
         run: echo "hello world"
-  Test:
-    needs: Build
+  Deploy:
+    needs: Test
     runs-on: ubuntu-latest
     steps:
       - name: Second job
-        run: echo "hello world"
+        run: echo "This is third job"
