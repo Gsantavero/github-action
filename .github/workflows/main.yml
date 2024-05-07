@@ -4,8 +4,8 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps: null
-    name: first job
-    run: |
+    - name: first job
+      run: |
       pwd
       touch file.txt
       ls -la
@@ -13,6 +13,6 @@ jobs:
     needs: Build
     run-on: ubuntu-latest
     steps: null
-    name: Second job
-    run: |
+    - name: Second job
+      run: |
       echo "hello world"
