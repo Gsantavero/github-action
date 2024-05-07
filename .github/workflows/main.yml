@@ -1,1 +1,18 @@
 name: Test
+'on': push
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps: null
+    name: first job
+    run: |
+      pwd
+      touch file.txt
+      ls -la
+  Test:
+    needs: Build
+    run-on: ubuntu-latest
+    steps: null
+    name: Second job
+    run: |
+      echo "hello world"
