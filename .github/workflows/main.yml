@@ -8,7 +8,7 @@ jobs:
         run: pwd
   Test:
     needs: Build
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Second job
         run: echo "hello world"
